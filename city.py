@@ -38,6 +38,7 @@ def make_pipeline():
     # complete the aggregation pipeline
     # What is the most common city name in our cities collection?
     pipeline = [
+          {"$match": {"name":{"$ne": None}}},
           {"$group": {
              "_id": "$name",
              "count": {"$sum": 1}
