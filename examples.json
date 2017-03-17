@@ -1,0 +1,2153 @@
+{
+   'country': 'India',
+   'elevation': 1855.0,
+   'isPartOf': 'Jammu and Kashmir',
+   'lat': 33.08,
+   'lon': 75.28,
+   'name': 'Kud',
+   'population': 1140,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 1855.0,
+   'isPartOf': 'Udhampur district',
+   'lat': 33.08,
+   'lon': 75.28,
+   'name': 'Kud',
+   'population': 1140,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 426.0,
+   'isPartOf': 'Jharkhand',
+   'lat': 23.72,
+   'lon': 85.5,
+   'name': 'Kuj',
+   'population': 18049,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 426.0,
+   'isPartOf': 'Ramgarh district',
+   'lat': 23.72,
+   'lon': 85.5,
+   'name': 'Kuj',
+   'population': 18049,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 419.0,
+   'isPartOf': 'Guna district',
+   'lat': 24.37,
+   'lon': 77.05,
+   'name': 'Kumbhraj',
+   'population': 13999,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 419.0,
+   'isPartOf': 'Madhya Pradesh',
+   'lat': 24.37,
+   'lon': 77.05,
+   'name': 'Kumbhraj',
+   'population': 13999,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 285.0,
+   'isPartOf': 'Chhattisgarh',
+   'lat': 21.27,
+   'lon': 81.52,
+   'name': 'Kumhari',
+   'population': 29737,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 285.0,
+   'isPartOf': 'Durg district',
+   'lat': 21.27,
+   'lon': 81.52,
+   'name': 'Kumhari',
+   'population': 29737,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 615.0,
+   'isPartOf': 'Dharwad district',
+   'lat': 15.25,
+   'lon': 75.25,
+   'name': 'Kundagola',
+   'population': 16837,
+   'postalCode': '58113',
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 615.0,
+   'isPartOf': 'Karnataka',
+   'lat': 15.25,
+   'lon': 75.25,
+   'name': 'Kundagola',
+   'population': 16837,
+   'postalCode': '58113',
+   'timeZone': ['Indian Standard Time']}
+{
+   'areaCode': ['91-8132'],
+   'country': 'India',
+   'elevation': 773.0,
+   'isPartOf': 'Karnataka',
+   'lat': 13.02,
+   'lon': 77.03,
+   'name': 'Kunigal',
+   'population': 30291,
+   'postalCode': '572130',
+   'timeZone': ['Indian Standard Time']}
+{
+   'areaCode': ['91-8132'],
+   'country': 'India',
+   'elevation': 773.0,
+   'isPartOf': 'Tumkur district',
+   'lat': 13.02,
+   'lon': 77.03,
+   'name': 'Kunigal',
+   'population': 30291,
+   'postalCode': '572130',
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 1761.0,
+   'isPartOf': 'Baramulla district',
+   'lat': 34.09,
+   'lon': 74.5,
+   'name': 'Kunzer',
+   'population': 1901,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 1761.0,
+   'isPartOf': 'Jammu and Kashmir',
+   'lat': 34.09,
+   'lon': 74.5,
+   'name': 'Kunzer',
+   'population': 1901,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 502.0,
+   'isPartOf': 'Maharashtra',
+   'lat': 18.08,
+   'lon': 75.43,
+   'name': 'Kurduvadi',
+   'population': 22773,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 502.0,
+   'isPartOf': 'Solapur district',
+   'lat': 18.08,
+   'lon': 75.43,
+   'name': 'Kurduvadi',
+   'population': 22773,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 418.0,
+   'isPartOf': 'Gulbarga district',
+   'lat': 17.2,
+   'lon': 77.35,
+   'name': 'Kurgunta',
+   'population': 8584,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 418.0,
+   'isPartOf': 'Karnataka',
+   'lat': 17.2,
+   'lon': 77.35,
+   'name': 'Kurgunta',
+   'population': 8584,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 21.0,
+   'isPartOf': 'Cuddalore district',
+   'lat': 11.57,
+   'lon': 79.6,
+   'name': 'Kurinjipadi',
+   'population': 23159,
+   'postalCode': '607302',
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 21.0,
+   'isPartOf': 'Tamil Nad',
+   'lat': 11.57,
+   'lon': 79.6,
+   'name': 'Kurinjipadi',
+   'population': 23159,
+   'postalCode': '607302',
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 298.0,
+   'isPartOf': 'Chhattisgarh',
+   'lat': 20.83,
+   'lon': 81.72,
+   'name': 'Kurud',
+   'population': 11469,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 298.0,
+   'isPartOf': 'Dhamtari district',
+   'lat': 20.83,
+   'lon': 81.72,
+   'name': 'Kurud',
+   'population': 11469,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 639.0,
+   'isPartOf': 'Karnataka',
+   'lat': 15.77,
+   'lon': 76.2,
+   'name': 'Kushtagi',
+   'population': 21180,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 639.0,
+   'isPartOf': 'Koppal district',
+   'lat': 15.77,
+   'lon': 76.2,
+   'name': 'Kushtagi',
+   'population': 21180,
+   'timeZone': ['Indian Standard Time']}
+{
+   'areaCode': ['01581'],
+   'country': 'India',
+   'elevation': 328.0,
+   'isPartOf': 'Nagaur district',
+   'lat': 27.65,
+   'lon': 74.3833,
+   'name': 'Ladnun',
+   'population': 57047,
+   'postalCode': '341306',
+   'timeZone': ['Indian Standard Time']}
+{
+   'areaCode': ['01581'],
+   'country': 'India',
+   'elevation': 328.0,
+   'isPartOf': 'Rajasthan',
+   'lat': 27.65,
+   'lon': 74.3833,
+   'name': 'Ladnun',
+   'population': 57047,
+   'postalCode': '341306',
+   'timeZone': ['Indian Standard Time']}
+{
+   'areaCode': ['07529'],
+   'country': 'India',
+   'elevation': 275.0,
+   'isPartOf': 'Bhind district',
+   'lat': 24.9,
+   'lon': 79.02,
+   'name': 'Lahar',
+   'population': 28253,
+   'postalCode': '477445',
+   'timeZone': ['Indian Standard Time']}
+{
+   'areaCode': ['07529'],
+   'country': 'India',
+   'elevation': 275.0,
+   'isPartOf': 'Madhya Pradesh',
+   'lat': 24.9,
+   'lon': 79.02,
+   'name': 'Lahar',
+   'population': 28253,
+   'postalCode': '477445',
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 133.0,
+   'isPartOf': 'Sitapur district',
+   'lat': 27.72,
+   'lon': 80.9,
+   'name': 'Laharpur',
+   'population': 50080,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 133.0,
+   'isPartOf': 'Uttar Pradesh',
+   'lat': 27.72,
+   'lon': 80.9,
+   'name': 'Laharpur',
+   'population': 50080,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 227.0,
+   'isPartOf': 'Bundi district',
+   'lat': 25.67,
+   'lon': 76.17,
+   'name': 'Lakheri',
+   'population': 26910,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 227.0,
+   'isPartOf': 'Rajasthan',
+   'lat': 25.67,
+   'lon': 76.17,
+   'name': 'Lakheri',
+   'population': 26910,
+   'timeZone': ['Indian Standard Time']}
+{
+   'areaCode': ['0091 3841 87'],
+   'country': 'India',
+   'elevation': 22.0,
+   'isPartOf': 'Assam',
+   'lat': 24.8,
+   'lon': 93.02,
+   'name': 'Lakhipur',
+   'population': 12545,
+   'postalCode': '788103',
+   'timeZone': ['Indian Standard Time']}
+{
+   'areaCode': ['0091 3841 87'],
+   'country': 'India',
+   'elevation': 22.0,
+   'isPartOf': 'Cachar district',
+   'lat': 24.8,
+   'lon': 93.02,
+   'name': 'Lakhipur',
+   'population': 12545,
+   'postalCode': '788103',
+   'timeZone': ['Indian Standard Time']}
+{
+   'areaCode': ['1332'],
+   'country': 'India',
+   'elevation': 287.0,
+   'isPartOf': 'Haridwar district',
+   'lat': 29.77,
+   'lon': 78.05,
+   'name': 'Laksar',
+   'population': 18240,
+   'postalCode': '247663',
+   'timeZone': ['Indian Standard Time']}
+{
+   'areaCode': ['1332'],
+   'country': 'India',
+   'elevation': 287.0,
+   'isPartOf': 'Uttarakhand',
+   'lat': 29.77,
+   'lon': 78.05,
+   'name': 'Laksar',
+   'population': 18240,
+   'postalCode': '247663',
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 371.0,
+   'isPartOf': 'Nainital district',
+   'lat': 29.08,
+   'lon': 79.52,
+   'name': 'Lalkuan',
+   'population': 6524,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 371.0,
+   'isPartOf': 'Uttarakhand',
+   'lat': 29.08,
+   'lon': 79.52,
+   'name': 'Lalkuan',
+   'population': 6524,
+   'timeZone': ['Indian Standard Time']}
+{
+   'areaCode': ['911431'],
+   'country': 'India',
+   'elevation': 298.0,
+   'isPartOf': 'Dausa district',
+   'lat': 26.57,
+   'lon': 76.33,
+   'name': 'Lalsot',
+   'population': 192278,
+   'postalCode': '303503',
+   'timeZone': ['Indian Standard Time']}
+{
+   'areaCode': ['911431'],
+   'country': 'India',
+   'elevation': 298.0,
+   'isPartOf': 'Rajasthan',
+   'lat': 26.57,
+   'lon': 76.33,
+   'name': 'Lalsot',
+   'population': 192278,
+   'postalCode': '303503',
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'isPartOf': 'Haridwar district',
+   'lat': 29.82,
+   'lon': 77.93,
+   'name': 'Landhaura',
+   'population': 16022,
+   'postalCode': '247664',
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'isPartOf': 'Uttarakhand',
+   'lat': 29.82,
+   'lon': 77.93,
+   'name': 'Landhaura',
+   'population': 16022,
+   'postalCode': '247664',
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 166.0,
+   'isPartOf': 'Maharashtra',
+   'lat': 16.85,
+   'lon': 73.55,
+   'name': 'Lanja',
+   'population': 12278,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 166.0,
+   'isPartOf': 'Ratnagiri district',
+   'lat': 16.85,
+   'lon': 73.55,
+   'name': 'Lanja',
+   'population': 12278,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 410.0,
+   'isPartOf': 'Chhindwara district',
+   'lat': 21.58,
+   'lon': 78.83,
+   'name': 'Lodhikheda',
+   'population': 9302,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 410.0,
+   'isPartOf': 'Madhya Pradesh',
+   'lat': 21.58,
+   'lon': 78.83,
+   'name': 'Lodhikheda',
+   'population': 9302,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 581.0,
+   'isPartOf': 'Maharashtra',
+   'lat': 20.15,
+   'lon': 74.23,
+   'name': 'Lasalgaon',
+   'population': 12525,
+   'postalCode': '422306',
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 581.0,
+   'isPartOf': 'Nashik district',
+   'lat': 20.15,
+   'lon': 74.23,
+   'name': 'Lasalgaon',
+   'population': 12525,
+   'postalCode': '422306',
+   'timeZone': ['Indian Standard Time']}
+{
+   'areaCode': ['08537'],
+   'country': 'India',
+   'elevation': 499.0,
+   'isPartOf': 'Karnataka',
+   'lat': 16.17,
+   'lon': 76.52,
+   'name': 'Lingasugur',
+   'population': 34932,
+   'postalCode': '584122',
+   'timeZone': ['Indian Standard Time']}
+{
+   'areaCode': ['08537'],
+   'country': 'India',
+   'elevation': 499.0,
+   'isPartOf': 'Raichur',
+   'lat': 16.17,
+   'lon': 76.52,
+   'name': 'Lingasugur',
+   'population': 34932,
+   'postalCode': '584122',
+   'timeZone': ['Indian Standard Time']}
+{
+   'areaCode': ['08537'],
+   'country': 'India',
+   'elevation': 499.0,
+   'isPartOf': 'Raichur district',
+   'lat': 16.17,
+   'lon': 76.52,
+   'name': 'Lingasugur',
+   'population': 34932,
+   'postalCode': '584122',
+   'timeZone': ['Indian Standard Time']}
+{
+   'areaCode': ['01577'],
+   'country': 'India',
+   'elevation': 410.0,
+   'isPartOf': 'Rajasthan',
+   'lat': 27.4,
+   'lon': 74.92,
+   'name': 'Losal',
+   'population': 25355,
+   'postalCode': '332025',
+   'timeZone': ['Indian Standard Time']}
+{
+   'areaCode': ['01577'],
+   'country': 'India',
+   'elevation': 410.0,
+   'isPartOf': 'Sikar district',
+   'lat': 27.4,
+   'lon': 74.92,
+   'name': 'Losal',
+   'population': 25355,
+   'postalCode': '332025',
+   'timeZone': ['Indian Standard Time']}
+{
+   'areaCode': ['07756'],
+   'country': 'India',
+   'elevation': 315.0,
+   'isPartOf': 'Chhattisgarh',
+   'lat': 22.28,
+   'lon': 81.73,
+   'name': 'Lormi',
+   'population': 12158,
+   'postalCode': '495115',
+   'timeZone': ['Indian Standard Time']}
+{
+   'areaCode': ['07756'],
+   'country': 'India',
+   'elevation': 315.0,
+   'isPartOf': 'Mungeli_District_Chhattisgarh',
+   'lat': 22.28,
+   'lon': 81.73,
+   'name': 'Lormi',
+   'population': 12158,
+   'postalCode': '495115',
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 389.0,
+   'isPartOf': 'Madhya Pradesh',
+   'lat': 24.13,
+   'lon': 76.3,
+   'name': 'Machalpur',
+   'population': 7884,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 389.0,
+   'isPartOf': 'Rajgarh district',
+   'lat': 24.13,
+   'lon': 76.3,
+   'name': 'Machalpur',
+   'population': 7884,
+   'timeZone': ['Indian Standard Time']}
+{
+   'areaCode': ['08642'],
+   'country': 'India',
+   'elevation': 136.0,
+   'isPartOf': 'Andhra Pradesh',
+   'lat': 16.48,
+   'lon': 79.43,
+   'name': 'Macherla',
+   'population': 49113,
+   'postalCode': '522426',
+   'timeZone': ['Indian Standard Time']}
+{
+   'areaCode': ['08642'],
+   'country': 'India',
+   'elevation': 136.0,
+   'isPartOf': 'Guntur district',
+   'lat': 16.48,
+   'lon': 79.43,
+   'name': 'Macherla',
+   'population': 49113,
+   'postalCode': '522426',
+   'timeZone': ['Indian Standard Time']}
+{
+   'areaCode': ['+911628'],
+   'country': 'India',
+   'elevation': 262.0,
+   'isPartOf': 'Ludhiana district',
+   'lat': 30.91,
+   'lon': 76.2,
+   'name': 'Machhiwara',
+   'population': 18363,
+   'postalCode': '141115',
+   'timeZone': ['Indian Standard Time']}
+{
+   'areaCode': ['+911628'],
+   'country': 'India',
+   'elevation': 262.0,
+   'isPartOf': 'Punjab India',
+   'lat': 30.91,
+   'lon': 76.2,
+   'name': 'Machhiwara',
+   'population': 18363,
+   'postalCode': '141115',
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 84.0,
+   'isPartOf': 'Jaunpur district',
+   'lat': 25.68,
+   'lon': 82.42,
+   'name': 'Machhali Shahar',
+   'population': 22943,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 84.0,
+   'isPartOf': 'Uttar Pradesh',
+   'lat': 25.68,
+   'lon': 82.42,
+   'name': 'Machhali Shahar',
+   'population': 22943,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 29.0,
+   'isPartOf': 'Kanchipuram district',
+   'lat': 12.9038,
+   'lon': 80.1586,
+   'name': 'Madambakkam',
+   'population': 16556,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 29.0,
+   'isPartOf': 'Tamil Nad',
+   'lat': 12.9038,
+   'lon': 80.1586,
+   'name': 'Madambakkam',
+   'population': 16556,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 9.0,
+   'isPartOf': 'Nadia district',
+   'lat': 23.02,
+   'lon': 88.48,
+   'name': 'Madanpur',
+   'population': 12030,
+   'postalCode': '741245',
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 9.0,
+   'isPartOf': 'West Bengal',
+   'lat': 23.02,
+   'lon': 88.48,
+   'name': 'Madanpur',
+   'population': 12030,
+   'postalCode': '741245',
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 131.0,
+   'isPartOf': 'Hardoi district',
+   'lat': 27.12,
+   'lon': 80.15,
+   'name': 'Madhoganj',
+   'population': 9861,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 131.0,
+   'isPartOf': 'Uttar Pradesh',
+   'lat': 27.12,
+   'lon': 80.15,
+   'name': 'Madhoganj',
+   'population': 9861,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 787.0,
+   'isPartOf': 'Karnataka',
+   'lat': 13.66,
+   'lon': 77.21,
+   'name': 'Madhugiri',
+   'population': 26351,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 787.0,
+   'isPartOf': 'Tumkur district',
+   'lat': 13.66,
+   'lon': 77.21,
+   'name': 'Madhugiri',
+   'population': 26351,
+   'timeZone': ['Indian Standard Time']}
+{
+   'areaCode': ['06438'],
+   'country': 'India',
+   'elevation': 228.0,
+   'isPartOf': 'Deoghar district',
+   'lat': 24.25,
+   'lon': 86.65,
+   'name': 'Madhupur',
+   'population': 200000,
+   'postalCode': '815353',
+   'timeZone': ['Indian Standard Time']}
+{
+   'areaCode': ['06438'],
+   'country': 'India',
+   'elevation': 228.0,
+   'isPartOf': 'Jharkhand',
+   'lat': 24.25,
+   'lon': 86.65,
+   'name': 'Madhupur',
+   'population': 200000,
+   'postalCode': '815353',
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'isPartOf': 'Budgam district',
+   'lat': 34.08,
+   'lon': 74.58,
+   'name': 'Magam',
+   'population': 4306,
+   'populationDensity': 200.0,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'isPartOf': 'Jammu and Kashmir',
+   'lat': 34.08,
+   'lon': 74.58,
+   'name': 'Magam',
+   'population': 4306,
+   'populationDensity': 200.0,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 176.0,
+   'isPartOf': 'Mathura district',
+   'lat': 27.43,
+   'lon': 77.75,
+   'name': 'Mahaban',
+   'population': 8608,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 176.0,
+   'isPartOf': 'Uttar Pradesh',
+   'lat': 27.43,
+   'lon': 77.75,
+   'name': 'Mahaban',
+   'population': 8608,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 33.0,
+   'isPartOf': 'Gujarat',
+   'lat': 22.83,
+   'lon': 72.77,
+   'name': 'Mahemdavad',
+   'population': 30769,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 33.0,
+   'isPartOf': 'Kheda district',
+   'lat': 22.83,
+   'lon': 72.77,
+   'name': 'Mahemdavad',
+   'population': 30769,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 144.0,
+   'isPartOf': 'Sitapur district',
+   'lat': 27.67,
+   'lon': 80.47,
+   'name': 'Maholi',
+   'population': 18406,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 144.0,
+   'isPartOf': 'Uttar Pradesh',
+   'lat': 27.67,
+   'lon': 80.47,
+   'name': 'Maholi',
+   'population': 18406,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 37.0,
+   'isPartOf': 'Gujarat',
+   'lat': 22.82,
+   'lon': 72.93,
+   'name': 'Mahudha',
+   'population': 15780,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 37.0,
+   'isPartOf': 'Kheda district',
+   'lat': 22.82,
+   'lon': 72.93,
+   'name': 'Mahudha',
+   'population': 15780,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 473.0,
+   'isPartOf': 'Maharashtra',
+   'lat': 17.47,
+   'lon': 76.3,
+   'name': 'Maindargi',
+   'population': 11754,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 473.0,
+   'isPartOf': 'Solapur district',
+   'lat': 17.47,
+   'lon': 76.3,
+   'name': 'Maindargi',
+   'population': 11754,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 1564.0,
+   'isPartOf': 'Meghalaya',
+   'lat': 25.57,
+   'lon': 91.63,
+   'name': 'Mairang',
+   'population': 11517,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 1564.0,
+   'isPartOf': 'West Khasi Hills district',
+   'lat': 25.57,
+   'lon': 91.63,
+   'name': 'Mairang',
+   'population': 11517,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 215.0,
+   'isPartOf': 'Amritsar district',
+   'lat': 31.76,
+   'lon': 74.95,
+   'name': 'Majitha',
+   'population': 13006,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 215.0,
+   'isPartOf': 'Punjab India',
+   'lat': 31.76,
+   'lon': 74.95,
+   'name': 'Majitha',
+   'population': 13006,
+   'timeZone': ['Indian Standard Time']}
+{
+   'areaCode': ['07334'],
+   'country': 'India',
+   'elevation': 480.0,
+   'isPartOf': 'Madhya Pradesh',
+   'lat': 23.27,
+   'lon': 76.15,
+   'name': 'Maksi',
+   'population': 98392,
+   'timeZone': ['Indian Standard Time']}
+{
+   'areaCode': ['07334'],
+   'country': 'India',
+   'elevation': 480.0,
+   'isPartOf': 'Shajapur',
+   'lat': 23.27,
+   'lon': 76.15,
+   'name': 'Maksi',
+   'population': 98392,
+   'timeZone': ['Indian Standard Time']}
+{
+   'areaCode': ['Police Station -03742345557'],
+   'country': 'India',
+   'elevation': 122.0,
+   'isPartOf': 'Assam',
+   'lat': 27.5,
+   'lon': 95.45,
+   'name': 'Makum',
+   'population': 15058,
+   'postalCode': '786170',
+   'timeZone': ['Indian Standard Time']}
+{
+   'areaCode': ['Police Station -03742345557'],
+   'country': 'India',
+   'elevation': 122.0,
+   'isPartOf': 'Tinsukia district',
+   'lat': 27.5,
+   'lon': 95.45,
+   'name': 'Makum',
+   'population': 15058,
+   'postalCode': '786170',
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 610.0,
+   'isPartOf': 'Karnataka',
+   'lat': 12.38,
+   'lon': 77.08,
+   'name': 'Malavalli',
+   'population': 35800,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 610.0,
+   'isPartOf': 'Mandya district',
+   'lat': 12.38,
+   'lon': 77.08,
+   'name': 'Malavalli',
+   'population': 35800,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 128.0,
+   'isPartOf': 'Lucknow district',
+   'lat': 26.92,
+   'lon': 80.72,
+   'name': 'Malihabad',
+   'population': 15806,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 128.0,
+   'isPartOf': 'Uttar Pradesh',
+   'lat': 26.92,
+   'lon': 80.72,
+   'name': 'Malihabad',
+   'population': 15806,
+   'timeZone': ['Indian Standard Time']}
+{
+   'areaCode': ['07267'],
+   'country': 'India',
+   'elevation': 255.0,
+   'isPartOf': 'Buldhana district',
+   'lat': 20.52,
+   'lon': 76.1124,
+   'name': 'Malkapur',
+   'population': 72015,
+   'populationDensity': 230.0,
+   'postalCode': '443101',
+   'timeZone': ['Indian Standard Time']}
+{
+   'areaCode': ['07267'],
+   'country': 'India',
+   'elevation': 255.0,
+   'isPartOf': 'Maharashtra',
+   'lat': 20.52,
+   'lon': 76.1124,
+   'name': 'Malkapur',
+   'population': 72015,
+   'populationDensity': 230.0,
+   'postalCode': '443101',
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 586.0,
+   'isPartOf': 'Kolhapur district',
+   'lat': 16.93,
+   'lon': 73.92,
+   'name': 'Malkapur',
+   'population': 5503,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 586.0,
+   'isPartOf': 'Maharashtra',
+   'lat': 16.93,
+   'lon': 73.92,
+   'name': 'Malkapur',
+   'population': 5503,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 183.0,
+   'isPartOf': 'Dhanbad district',
+   'lat': 23.78,
+   'lon': 86.3,
+   'name': 'Malkera',
+   'population': 9804,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 183.0,
+   'isPartOf': 'Jharkhand',
+   'lat': 23.78,
+   'lon': 86.3,
+   'name': 'Malkera',
+   'population': 9804,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 293.0,
+   'isPartOf': 'Salem district',
+   'lat': 11.55,
+   'lon': 78.13,
+   'name': 'Mallur',
+   'population': 52482,
+   'postalCode': '636203',
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 293.0,
+   'isPartOf': 'Tamil Nad',
+   'lat': 11.55,
+   'lon': 78.13,
+   'name': 'Mallur',
+   'population': 52482,
+   'postalCode': '636203',
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 332.0,
+   'isPartOf': 'Rajasthan',
+   'lat': 26.28,
+   'lon': 75.38,
+   'name': 'Malpura',
+   'population': 27242,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 332.0,
+   'isPartOf': 'Tonk district',
+   'lat': 26.28,
+   'lon': 75.38,
+   'name': 'Malpura',
+   'population': 27242,
+   'timeZone': ['Indian Standard Time']}
+{
+   'areaCode': ['914574 XX'],
+   'country': 'India',
+   'elevation': 70.0,
+   'isPartOf': 'Sivaganga district',
+   'lat': 9.7,
+   'lon': 78.48,
+   'name': 'Manamadurai',
+   'population': 26284,
+   'postalCode': '630 606',
+   'timeZone': ['Indian Standard Time']}
+{
+   'areaCode': ['914574 XX'],
+   'country': 'India',
+   'elevation': 70.0,
+   'isPartOf': 'Tamil Nad',
+   'lat': 9.7,
+   'lon': 78.48,
+   'name': 'Manamadurai',
+   'population': 26284,
+   'postalCode': '630 606',
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 180.0,
+   'isPartOf': 'Dhar district',
+   'lat': 22.23,
+   'lon': 75.08,
+   'name': 'Manawar',
+   'population': 25460,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 180.0,
+   'isPartOf': 'Madhya Pradesh',
+   'lat': 22.23,
+   'lon': 75.08,
+   'name': 'Manawar',
+   'population': 25460,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 682.0,
+   'isPartOf': 'Maharashtra',
+   'lat': 19.0,
+   'lon': 73.93,
+   'name': 'Manchar',
+   'population': 13793,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 682.0,
+   'isPartOf': 'Pune district',
+   'lat': 19.0,
+   'lon': 73.93,
+   'name': 'Manchar',
+   'population': 13793,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 382.0,
+   'isPartOf': 'Bhilwara district',
+   'lat': 25.2,
+   'lon': 75.1,
+   'name': 'Mandalgarh',
+   'population': 20161,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 382.0,
+   'isPartOf': 'Rajasthan',
+   'lat': 25.2,
+   'lon': 75.1,
+   'name': 'Mandalgarh',
+   'population': 20161,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 9.0,
+   'isPartOf': 'Ramanathapuram district',
+   'lat': 9.28,
+   'lon': 79.12,
+   'name': 'Mandapam',
+   'population': 15799,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 9.0,
+   'isPartOf': 'Tamil Nad',
+   'lat': 9.28,
+   'lon': 79.12,
+   'name': 'Mandapam',
+   'population': 15799,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 343.0,
+   'isPartOf': 'Dausa district',
+   'lat': 24.58,
+   'lon': 76.25,
+   'name': 'Mandawar',
+   'population': 10108,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 343.0,
+   'isPartOf': 'Rajasthan',
+   'lat': 24.58,
+   'lon': 76.25,
+   'name': 'Mandawar',
+   'population': 10108,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 298.0,
+   'isPartOf': 'Jabalpur district',
+   'lat': 21.85,
+   'lon': 80.25,
+   'name': 'Manegaon',
+   'population': 9174,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 298.0,
+   'isPartOf': 'Madhya Pradesh',
+   'lat': 21.85,
+   'lon': 80.25,
+   'name': 'Manegaon',
+   'population': 9174,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 305.0,
+   'isPartOf': 'Madhya Pradesh',
+   'lat': 24.68,
+   'lon': 81.55,
+   'name': 'Mangawan',
+   'population': 11556,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 305.0,
+   'isPartOf': 'Rewa District',
+   'lat': 24.68,
+   'lon': 81.55,
+   'name': 'Mangawan',
+   'population': 11556,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 18.0,
+   'isPartOf': 'Gujarat',
+   'lat': 21.12,
+   'lon': 70.12,
+   'name': 'Mangrol',
+   'population': 55094,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 18.0,
+   'isPartOf': 'Junagadh district',
+   'lat': 21.12,
+   'lon': 70.12,
+   'name': 'Mangrol',
+   'population': 55094,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 242.0,
+   'isPartOf': 'Baran district',
+   'lat': 25.33,
+   'lon': 76.52,
+   'name': 'Mangrol',
+   'population': 21836,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 242.0,
+   'isPartOf': 'Rajasthan',
+   'lat': 25.33,
+   'lon': 76.52,
+   'name': 'Mangrol',
+   'population': 21836,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 413.0,
+   'isPartOf': 'Beed district',
+   'lat': 19.15,
+   'lon': 76.23,
+   'name': 'Manjlegaon',
+   'population': 43969,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 413.0,
+   'isPartOf': 'Maharashtra',
+   'lat': 19.15,
+   'lon': 76.23,
+   'name': 'Manjlegaon',
+   'population': 43969,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 27.0,
+   'isPartOf': 'Assam',
+   'lat': 25.53,
+   'lon': 89.87,
+   'name': 'Mankachar',
+   'population': 28771,
+   'postalCode': '783131',
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 27.0,
+   'isPartOf': 'Dhubri district',
+   'lat': 25.53,
+   'lon': 89.87,
+   'name': 'Mankachar',
+   'population': 28771,
+   'postalCode': '783131',
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 581.0,
+   'isPartOf': 'Dharmapuri district',
+   'lat': 12.4,
+   'lon': 78.0,
+   'name': 'Marandahalli',
+   'population': 10171,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 581.0,
+   'isPartOf': 'Tamil Nad',
+   'lat': 12.4,
+   'lon': 78.0,
+   'name': 'Marandahalli',
+   'population': 10171,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 87.0,
+   'isPartOf': 'Jaunpur district',
+   'lat': 25.62,
+   'lon': 82.62,
+   'name': 'Mariah',
+   'population': 20142,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 87.0,
+   'isPartOf': 'Uttar Pradesh',
+   'lat': 25.62,
+   'lon': 82.62,
+   'name': 'Mariah',
+   'population': 20142,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'isPartOf': 'Bihar',
+   'lat': 25.21,
+   'lon': 85.02,
+   'name': 'Masaurhi',
+   'population': 46943,
+   'postalCode': '804452',
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'isPartOf': 'Patna district',
+   'lat': 25.21,
+   'lon': 85.02,
+   'name': 'Masaurhi',
+   'population': 46943,
+   'postalCode': '804452',
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 142.0,
+   'isPartOf': 'Banda district',
+   'lat': 25.45,
+   'lon': 80.15,
+   'name': 'Mataundh',
+   'population': 8278,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 142.0,
+   'isPartOf': 'Uttar Pradesh',
+   'lat': 25.45,
+   'lon': 80.15,
+   'name': 'Mataundh',
+   'population': 8278,
+   'timeZone': ['Indian Standard Time']}
+{
+   'areaCode': ['03583'],
+   'country': 'India',
+   'elevation': 50.0,
+   'isPartOf': 'Cooch Behar district',
+   'lat': 26.33,
+   'lon': 89.22,
+   'name': 'Mathabhanga',
+   'population': 21110,
+   'postalCode': '736146',
+   'timeZone': ['Indian Standard Time']}
+{
+   'areaCode': ['03583'],
+   'country': 'India',
+   'elevation': 50.0,
+   'isPartOf': 'West Bengal',
+   'lat': 26.33,
+   'lon': 89.22,
+   'name': 'Mathabhanga',
+   'population': 21110,
+   'postalCode': '736146',
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 120.0,
+   'isPartOf': 'Hamirpur district Uttar Pradesh',
+   'lat': 25.68,
+   'lon': 80.12,
+   'name': 'Maudaha',
+   'population': 34417,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 120.0,
+   'isPartOf': 'Uttar Pradesh',
+   'lat': 25.68,
+   'lon': 80.12,
+   'name': 'Maudaha',
+   'population': 34417,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 313.0,
+   'isPartOf': 'Madhya Pradesh',
+   'lat': 24.68,
+   'lon': 81.88,
+   'name': 'Mauganj',
+   'population': 22989,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 313.0,
+   'isPartOf': 'Rewa District',
+   'lat': 24.68,
+   'lon': 81.88,
+   'name': 'Mauganj',
+   'population': 22989,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'isPartOf': 'Imphal West district',
+   'lat': 24.6,
+   'lon': 93.9,
+   'name': 'Mayang Imphal',
+   'population': 20536,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'isPartOf': 'Manipur',
+   'lat': 24.6,
+   'lon': 93.9,
+   'name': 'Mayang Imphal',
+   'population': 20536,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 178.0,
+   'isPartOf': 'Gujarat',
+   'lat': 23.5,
+   'lon': 73.5,
+   'name': 'Meghraj',
+   'population': 9891,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 178.0,
+   'isPartOf': 'Sabarkantha district',
+   'lat': 23.5,
+   'lon': 73.5,
+   'name': 'Meghraj',
+   'population': 9891,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 61.0,
+   'isPartOf': 'Azamgarh district',
+   'lat': 25.88,
+   'lon': 83.12,
+   'name': 'Mehnagar',
+   'population': 13319,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 61.0,
+   'isPartOf': 'Uttar Pradesh',
+   'lat': 25.88,
+   'lon': 83.12,
+   'name': 'Mehnagar',
+   'population': 13319,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 58.0,
+   'isPartOf': 'Cooch Behar district',
+   'lat': 26.35,
+   'lon': 88.92,
+   'name': 'Mekhliganj',
+   'population': 10833,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 58.0,
+   'isPartOf': 'West Bengal',
+   'lat': 26.35,
+   'lon': 88.92,
+   'name': 'Mekhliganj',
+   'population': 10833,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 567.0,
+   'isPartOf': 'Rampur district',
+   'lat': 28.61,
+   'lon': 79.168,
+   'name': 'Milak',
+   'population': 25559,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 567.0,
+   'isPartOf': 'Uttar Pradesh',
+   'lat': 28.61,
+   'lon': 79.168,
+   'name': 'Milak',
+   'population': 25559,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 154.0,
+   'isPartOf': 'Bhind district',
+   'lat': 26.28,
+   'lon': 78.98,
+   'name': 'Mihona',
+   'population': 14799,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 154.0,
+   'isPartOf': 'Madhya Pradesh',
+   'lat': 26.28,
+   'lon': 78.98,
+   'name': 'Mihona',
+   'population': 14799,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 7.0,
+   'isPartOf': 'Gujarat',
+   'lat': 22.41,
+   'lon': 69.0,
+   'name': 'Mithapur',
+   'population': 13558,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 7.0,
+   'isPartOf': 'Jamnagar district',
+   'lat': 22.41,
+   'lon': 69.0,
+   'name': 'Mithapur',
+   'population': 13558,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 240.0,
+   'isPartOf': 'Haridwar district',
+   'lat': 29.78,
+   'lon': 77.97,
+   'name': '\u092e\u094b\u0939\u0928\u092a\u0941\u0930 \u092e\u094b\u0939\u092e\u094d\u092e\u0926\u092a\u0941\u0930',
+   'population': 8700,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 240.0,
+   'isPartOf': 'Uttarakhand',
+   'lat': 29.78,
+   'lon': 77.97,
+   'name': '\u092e\u094b\u0939\u0928\u092a\u0941\u0930 \u092e\u094b\u0939\u092e\u094d\u092e\u0926\u092a\u0941\u0930',
+   'population': 8700,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 366.0,
+   'isPartOf': 'Chhindwara district',
+   'lat': 21.65,
+   'lon': 78.72,
+   'name': 'Mohgaon',
+   'population': 9890,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 366.0,
+   'isPartOf': 'Madhya Pradesh',
+   'lat': 21.65,
+   'lon': 78.72,
+   'name': 'Mohgaon',
+   'population': 9890,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 97.0,
+   'isPartOf': 'Assam',
+   'lat': 27.18,
+   'lon': 94.93,
+   'name': 'Moran Town',
+   'population': 6784,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 97.0,
+   'isPartOf': 'Dibrugarh district',
+   'lat': 27.18,
+   'lon': 94.93,
+   'name': 'Moran Town',
+   'population': 6784,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'isPartOf': 'Jhansi district',
+   'lat': 25.72,
+   'lon': 78.95,
+   'name': 'Moth',
+   'population': 13029,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'isPartOf': 'Uttar Pradesh',
+   'lat': 25.72,
+   'lon': 78.95,
+   'name': 'Moth',
+   'population': 13029,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 563.0,
+   'isPartOf': 'Bijapur district Karnataka',
+   'lat': 16.33,
+   'lon': 76.13,
+   'name': 'Muddebihal',
+   'population': 28235,
+   'postalCode': '586212',
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 563.0,
+   'isPartOf': 'Karnataka',
+   'lat': 16.33,
+   'lon': 76.13,
+   'name': 'Muddebihal',
+   'population': 28235,
+   'postalCode': '586212',
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 915.0,
+   'isPartOf': 'Chikkamagaluru district',
+   'lat': 13.13,
+   'lon': 75.63,
+   'name': 'Mudigere',
+   'population': 8962,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 915.0,
+   'isPartOf': 'Karnataka',
+   'lat': 13.13,
+   'lon': 75.63,
+   'name': 'Mudigere',
+   'population': 8962,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 132.0,
+   'isPartOf': 'Dhanbad district',
+   'lat': 23.77,
+   'lon': 86.73,
+   'name': 'Mugma',
+   'population': 2978,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 132.0,
+   'isPartOf': 'Jharkhand',
+   'lat': 23.77,
+   'lon': 86.73,
+   'name': 'Mugma',
+   'population': 2978,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 61.0,
+   'isPartOf': 'Farrukhabad district',
+   'lat': 25.63,
+   'lon': 83.75,
+   'name': 'Muhammadabad',
+   'population': 21385,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 61.0,
+   'isPartOf': 'Uttar Pradesh',
+   'lat': 25.63,
+   'lon': 83.75,
+   'name': 'Muhammadabad',
+   'population': 21385,
+   'timeZone': ['Indian Standard Time']}
+{
+   'areaCode': ['91-1594'],
+   'country': 'India',
+   'elevation': 349.0,
+   'isPartOf': 'Jhunjhunu district',
+   'lat': 27.95,
+   'lon': 75.2167,
+   'name': 'Mukundgarh',
+   'population': 17790,
+   'postalCode': '333 705',
+   'timeZone': ['Indian Standard Time']}
+{
+   'areaCode': ['91-1594'],
+   'country': 'India',
+   'elevation': 349.0,
+   'isPartOf': 'Rajasthan',
+   'lat': 27.95,
+   'lon': 75.2167,
+   'name': 'Mukundgarh',
+   'population': 17790,
+   'postalCode': '333 705',
+   'timeZone': ['Indian Standard Time']}
+{
+   'areaCode': ['+01883'],
+   'country': 'India',
+   'isPartOf': 'Hoshiarpur district',
+   'lat': 31.95,
+   'lon': 75.62,
+   'name': 'Mukerian',
+   'population': 21379,
+   'postalCode': '144211',
+   'timeZone': ['Indian Standard Time']}
+{
+   'areaCode': ['+01883'],
+   'country': 'India',
+   'isPartOf': 'Punjab India',
+   'lat': 31.95,
+   'lon': 75.62,
+   'name': 'Mukerian',
+   'population': 21379,
+   'postalCode': '144211',
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 198.0,
+   'isPartOf': 'Chandrapur district',
+   'lat': 20.07,
+   'lon': 79.67,
+   'name': 'Mul',
+   'population': 22256,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 198.0,
+   'isPartOf': 'Maharashtra',
+   'lat': 20.07,
+   'lon': 79.67,
+   'name': 'Mul',
+   'population': 22256,
+   'timeZone': ['Indian Standard Time']}
+{
+   'areaCode': ['01633'],
+   'country': 'India',
+   'elevation': 184.0,
+   'isPartOf': 'Shrimuktsarsahib_Shri_Muktsar_Sahib%5D_district',
+   'lat': 30.475,
+   'lon': 74.515,
+   'name': 'Shri Muktsar Sahib',
+   'population': 117085,
+   'postalCode': '152026',
+   'timeZone': ['Indian Standard Time']}
+{
+   'areaCode': ['01633'],
+   'country': 'India',
+   'elevation': 184.0,
+   'isPartOf': 'Punjab India',
+   'lat': 30.475,
+   'lon': 74.515,
+   'name': 'Shri Muktsar Sahib',
+   'population': 117085,
+   'postalCode': '152026',
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 749.0,
+   'isPartOf': 'Betul district',
+   'lat': 21.77,
+   'lon': 78.25,
+   'name': 'Multai',
+   'population': 21428,
+   'postalCode': '460661',
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 749.0,
+   'isPartOf': 'Madhya Pradesh',
+   'lat': 21.77,
+   'lon': 78.25,
+   'name': 'Multai',
+   'population': 21428,
+   'postalCode': '460661',
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 567.0,
+   'isPartOf': 'Karnataka',
+   'lat': 14.97,
+   'lon': 75.03,
+   'name': 'Mundgod',
+   'population': 16171,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 567.0,
+   'isPartOf': 'Uttara Kannada',
+   'lat': 14.97,
+   'lon': 75.03,
+   'name': 'Mundgod',
+   'population': 16171,
+   'timeZone': ['Indian Standard Time']}
+{
+   'areaCode': ['01584'],
+   'country': 'India',
+   'elevation': 335.0,
+   'isPartOf': 'Nagaur district',
+   'lat': 27.07,
+   'lon': 73.82,
+   'name': 'Marwar Mundwa',
+   'population': 16004,
+   'postalCode': '341026',
+   'timeZone': ['Indian Standard Time']}
+{
+   'areaCode': ['01584'],
+   'country': 'India',
+   'elevation': 335.0,
+   'isPartOf': 'Rajasthan',
+   'lat': 27.07,
+   'lon': 73.82,
+   'name': 'Marwar Mundwa',
+   'population': 16004,
+   'postalCode': '341026',
+   'timeZone': ['Indian Standard Time']}
+{
+   'areaCode': ['07548'],
+   'country': 'India',
+   'elevation': 372.0,
+   'isPartOf': 'Ashoknagar district',
+   'lat': 24.42,
+   'lon': 78.1,
+   'name': 'Mungaoli',
+   'population': 9000,
+   'postalCode': '473443',
+   'timeZone': ['Indian Standard Time']}
+{
+   'areaCode': ['07548'],
+   'country': 'India',
+   'elevation': 372.0,
+   'isPartOf': 'Madhya Pradesh',
+   'lat': 24.42,
+   'lon': 78.1,
+   'name': 'Mungaoli',
+   'population': 9000,
+   'postalCode': '473443',
+   'timeZone': ['Indian Standard Time']}
+{
+   'areaCode': ['917755'],
+   'country': 'India',
+   'elevation': 288.0,
+   'isPartOf': 'Chhattisgarh',
+   'lat': 22.07,
+   'leaderTitle': 'Mayor',
+   'lon': 81.68,
+   'name': 'Mungeli',
+   'population': 27387,
+   'timeZone': ['Indian Standard Time']}
+{
+   'areaCode': ['917755'],
+   'country': 'India',
+   'elevation': 288.0,
+   'isPartOf': 'Mungeli_District_Chhattisgarh',
+   'lat': 22.07,
+   'leaderTitle': 'Mayor',
+   'lon': 81.68,
+   'name': 'Mungeli',
+   'population': 27387,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 215.0,
+   'isPartOf': 'Ghaziabad district India',
+   'lat': 28.78,
+   'lon': 77.5,
+   'name': 'Muradnagar',
+   'population': 100080,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 215.0,
+   'isPartOf': 'Uttar Pradesh',
+   'lat': 28.78,
+   'lon': 77.5,
+   'name': 'Muradnagar',
+   'population': 100080,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 83.0,
+   'isPartOf': 'Maharashtra',
+   'lat': 19.25,
+   'lon': 73.4,
+   'name': 'Murbad',
+   'population': 15823,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 83.0,
+   'isPartOf': 'Thane district',
+   'lat': 19.25,
+   'lon': 73.4,
+   'name': 'Murbad',
+   'population': 15823,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 556.0,
+   'isPartOf': 'Kolhapur district',
+   'lat': 16.4,
+   'lon': 74.2,
+   'name': 'Murgud',
+   'population': 9200,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 556.0,
+   'isPartOf': 'Maharashtra',
+   'lat': 16.4,
+   'lon': 74.2,
+   'name': 'Murgud',
+   'population': 9200,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 159.0,
+   'isPartOf': 'Maharashtra',
+   'lat': 17.77,
+   'lon': 73.12,
+   'name': 'Murud',
+   'population': 12551,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 159.0,
+   'isPartOf': 'Raigad district',
+   'lat': 17.77,
+   'lon': 73.12,
+   'name': 'Murud',
+   'population': 12551,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 548.0,
+   'isPartOf': 'Maharashtra',
+   'lat': 18.07,
+   'lon': 74.32,
+   'name': 'Murum',
+   'population': 17232,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 548.0,
+   'isPartOf': 'Osmanabad district',
+   'lat': 18.07,
+   'lon': 74.32,
+   'name': 'Murum',
+   'population': 17232,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 160.0,
+   'isPartOf': 'East Singhbhum district',
+   'lat': 22.52,
+   'lon': 86.45,
+   'name': 'Musabani',
+   'population': 33892,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 160.0,
+   'isPartOf': 'Jharkhand',
+   'lat': 22.52,
+   'lon': 86.45,
+   'name': 'Musabani',
+   'population': 33892,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 102.0,
+   'isPartOf': 'Amethi district',
+   'lat': 26.37,
+   'lon': 81.8,
+   'name': 'Musafirkhana',
+   'population': 7873,
+   'postalCode': '227813',
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 102.0,
+   'isPartOf': 'Uttar Pradesh',
+   'lat': 26.37,
+   'lon': 81.8,
+   'name': 'Musafirkhana',
+   'population': 7873,
+   'postalCode': '227813',
+   'timeZone': ['Indian Standard Time']}
+{
+   'areaCode': ['03472'],
+   'country': 'India',
+   'elevation': 14.0,
+   'isPartOf': 'Nadia district',
+   'lat': 23.42,
+   'lon': 88.37,
+   'name': 'Nabadwip',
+   'population': 175474,
+   'postalCode': '741302',
+   'timeZone': ['Indian Standard Time']}
+{
+   'areaCode': ['03472'],
+   'country': 'India',
+   'elevation': 14.0,
+   'isPartOf': 'West Bengal',
+   'lat': 23.42,
+   'lon': 88.37,
+   'name': 'Nabadwip',
+   'population': 175474,
+   'postalCode': '741302',
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 469.0,
+   'isPartOf': 'Ahmednagar district',
+   'lat': 18.87,
+   'lon': 76.43,
+   'name': 'Nagapur',
+   'population': 7062,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 469.0,
+   'isPartOf': 'Maharashtra',
+   'lat': 18.87,
+   'lon': 76.43,
+   'name': 'Nagapur',
+   'population': 7062,
+   'timeZone': ['Indian Standard Time']}
+{
+   'areaCode': ['02194'],
+   'country': 'India',
+   'elevation': 12.0,
+   'isPartOf': 'Maharashtra',
+   'lat': 18.53,
+   'lon': 73.13,
+   'name': 'Nagothana',
+   'population': 10168,
+   'postalCode': '402106',
+   'timeZone': ['Indian Standard Time']}
+{
+   'areaCode': ['02194'],
+   'country': 'India',
+   'elevation': 12.0,
+   'isPartOf': 'Raigad district',
+   'lat': 18.53,
+   'lon': 73.13,
+   'name': 'Nagothana',
+   'population': 10168,
+   'postalCode': '402106',
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 118.0,
+   'isPartOf': 'Lucknow district',
+   'lat': 26.62,
+   'lon': 81.13,
+   'name': 'Nagram',
+   'population': 9218,
+   'postalCode': '226303',
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 118.0,
+   'isPartOf': 'Uttar Pradesh',
+   'lat': 26.62,
+   'lon': 81.13,
+   'name': 'Nagram',
+   'population': 9218,
+   'postalCode': '226303',
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 121.0,
+   'isPartOf': 'Assam',
+   'lat': 27.28,
+   'lon': 95.33,
+   'name': 'Naharkatiya',
+   'population': 15528,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 121.0,
+   'isPartOf': 'Dibrugarh district',
+   'lat': 27.28,
+   'lon': 95.33,
+   'name': 'Naharkatiya',
+   'population': 15528,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 291.0,
+   'isPartOf': 'Bundi district',
+   'lat': 25.77,
+   'lon': 75.85,
+   'name': 'Nainwa',
+   'population': 15172,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 291.0,
+   'isPartOf': 'Rajasthan',
+   'lat': 25.77,
+   'lon': 75.85,
+   'name': 'Nainwa',
+   'population': 15172,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 15.0,
+   'isPartOf': 'Kanyakumari district',
+   'lat': 10.92,
+   'lon': 79.32,
+   'name': 'Nallur',
+   'population': 15266,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 15.0,
+   'isPartOf': 'Tamil Nad',
+   'lat': 10.92,
+   'lon': 79.32,
+   'name': 'Nallur',
+   'population': 15266,
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 301.0,
+   'isPartOf': 'Erode district',
+   'lat': 11.37,
+   'lon': 77.33,
+   'name': 'Nambiyur',
+   'population': 15651,
+   'postalCode': '638458',
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 301.0,
+   'isPartOf': 'Tamil Nad',
+   'lat': 11.37,
+   'lon': 77.33,
+   'name': 'Nambiyur',
+   'population': 15651,
+   'postalCode': '638458',
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'isPartOf': 'Bishnupur district',
+   'lat': 24.71,
+   'lon': 93.84,
+   'name': 'Nambol',
+   'population': 18117,
+   'postalCode': '795134',
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'isPartOf': 'Manipur',
+   'lat': 24.71,
+   'lon': 93.84,
+   'name': 'Nambol',
+   'population': 18117,
+   'postalCode': '795134',
+   'timeZone': ['Indian Standard Time']}
+{
+   'country': 'India',
+   'elevation': 490.0,
+   'isPartOf': 'Madhya Pradesh',
+   'lat': 23.43,
+   'lon': 75.05,
+   'name': 'Namli',
+   'population': 8475,
+   'timeZone': ['Indian Standard Time']}
+

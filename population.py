@@ -25,6 +25,8 @@ in examples in this lesson. If you attempt some of the same queries that we look
 examples, your results will be different.
 """
 
+import pprint
+
 def get_db(db_name):
     from pymongo import MongoClient
     client = MongoClient('localhost:27017')
@@ -34,7 +36,18 @@ def get_db(db_name):
 def make_pipeline():
     # complete the aggregation pipeline
     # What is the average city population for a region in India?
-    pipeline = []
+    pipeline = [
+          {"$match": {"country": "India"}},
+          {"$unwind": "$isPartOf"},
+          {"$group": {
+             "_id": "$isPartOf",
+             "pops": {"$avg": "$population"},
+             }},
+          {"$group": {
+             "_id": "avg of Region avg",
+             "avg": {"$avg": "$pops"}
+             }}
+          ]
     return pipeline
 
 def aggregate(db, pipeline):
@@ -42,11 +55,11 @@ def aggregate(db, pipeline):
     return result
 
 if __name__ == '__main__':
-    db = get_db('test')
+    db = get_db('examples')
     pipeline = make_pipeline()
     result = aggregate(db, pipeline)
     print "OK"
-    assert len(result["result"]) == 1
-    assert result["result"][0]["avg"] == 196025.97814809752
-    import pprint
-    pprint.pprint(result)
+    #assert len(result["result"]) == 1
+    #assert result["result"][0]["avg"] == 196025.97814809752
+    for r in result:
+       pprint.pprint(r)
