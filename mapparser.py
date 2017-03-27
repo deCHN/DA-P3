@@ -18,11 +18,11 @@ def count_tags(filename):
 
    tags = {}
    for element in root.iter():
-      if element in tags.keys():
-         tags[element] += 1
+      tag = element.tag
+      if tag in tags.keys():
+         tags[tag] += 1
       else:
-         tags[element] = 1
-   tags.pop(root.tag)
+         tags[tag] = 1
 
    return tags
 
