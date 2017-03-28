@@ -152,7 +152,7 @@ WAY_NODES_FIELDS = ['id', 'node_id', 'position']
 
 
 def shape_element(element, node_attr_fields=NODE_FIELDS, way_attr_fields=WAY_FIELDS,
-problem_chars=PROBLEMCHARS, default_tag_type='regular'):
+   problem_chars=PROBLEMCHARS, default_tag_type='regular'):
    """Clean and shape node or way XML element to Python dict"""
 
    node_attribs = {}
@@ -162,9 +162,39 @@ problem_chars=PROBLEMCHARS, default_tag_type='regular'):
 
    # YOUR CODE HERE
    if element.tag == 'node':
-      return {'node': node_attribs, 'node_tags': tags}
+      return shapingNode(element)
+      #return {'node': node_attribs, 'node_tags': tags}
    elif element.tag == 'way':
       return {'way': way_attribs, 'way_nodes': way_nodes, 'way_tags': tags}
+
+def shapingNode(element): #return {'node': node_attribs, 'node_tags': tags}
+   # NODE_FIELDS = ['id', 'lat', 'lon', 'user', 'uid', 'version', 'changeset', 'timestamp']
+   node = {}
+   for attr in element.attrib:
+      if attr in NODE_FIELDS:
+         node[attr] = element.attrib.get(attr)
+
+   # NODE_TAGS_FIELDS = ['id', 'key', 'value', 'type']
+   nodeTags = []
+   id = node.get('id')
+
+   for tag in element.iter('tag'):
+      keys = tag.attrib.get('k').split(':')
+      if len(keys) == 1:
+         key = keys[0]
+         t = 'regular'
+      else:
+         key = keys[1:]
+         t = keys[0]
+
+      nodeTags.append({
+         'id': node.get('id'),
+         'key': key,
+         'value': tag.attrib.get('v'),
+         'type': t
+      })
+
+      return {'node': node, 'node_tags': nodeTags}
 
 
 # ================================================== #
