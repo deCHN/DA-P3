@@ -1,4 +1,4 @@
-m version="0.6" generator="CGImap 0.3.3 (28791 thorn-03.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<osm version="0.6" generator="CGImap 0.3.3 (28791 thorn-03.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
  <bounds minlat="41.9704500" minlon="-87.6928300" maxlat="41.9758200" maxlon="-87.6894800"/>
  <node id="261114295" visible="true" version="7" changeset="11129782" timestamp="2012-03-28T18:31:23Z" user="bbmiller" uid="451048" lat="41.9730791" lon="-87.6866303"/>
  <node id="261114296" visible="true" version="6" changeset="8448766" timestamp="2011-06-15T17:04:54Z" user="bbmiller" uid="451048" lat="41.9730416" lon="-87.6878512"/>

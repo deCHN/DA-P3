@@ -130,7 +130,7 @@ import cerberus
 
 import schema
 
-OSM_PATH = "example.osm"
+OSM_PATH = "data_example.osm"
 
 NODES_PATH = "nodes.csv"
 NODE_TAGS_PATH = "nodes_tags.csv"
@@ -165,7 +165,8 @@ def shape_element(element, node_attr_fields=NODE_FIELDS, way_attr_fields=WAY_FIE
       return shapingNode(element)
       #return {'node': node_attribs, 'node_tags': tags}
    elif element.tag == 'way':
-      return {'way': way_attribs, 'way_nodes': way_nodes, 'way_tags': tags}
+      return shapingWay(element)
+      #return {'way': way_attribs, 'way_nodes': way_nodes, 'way_tags': tags}
 
 def shapingNode(element): #return {'node': node_attribs, 'node_tags': tags}
    # NODE_FIELDS = ['id', 'lat', 'lon', 'user', 'uid', 'version', 'changeset', 'timestamp']
@@ -176,15 +177,15 @@ def shapingNode(element): #return {'node': node_attribs, 'node_tags': tags}
 
    # NODE_TAGS_FIELDS = ['id', 'key', 'value', 'type']
    nodeTags = []
-   id = node.get('id')
 
    for tag in element.iter('tag'):
-      keys = tag.attrib.get('k').split(':')
+      keystr = tag.attrib.get('k')
+      keys = keystr.split(':')
       if len(keys) == 1:
          key = keys[0]
          t = 'regular'
       else:
-         key = keys[1:]
+         key = keystr[(keystr.index(':')+1):]
          t = keys[0]
 
       nodeTags.append({
@@ -194,7 +195,48 @@ def shapingNode(element): #return {'node': node_attribs, 'node_tags': tags}
          'type': t
       })
 
+      #pprint.pprint({'node': node, 'node_tags': nodeTags})
       return {'node': node, 'node_tags': nodeTags}
+
+def shapingWay(element): #return {'way': way_attribs, 'way_nodes': way_nodes, 'way_tags': tags}
+   way = {}
+   way_tags=[]
+   for attr in element.attrib:
+      if attr in WAY_FIELDS: #WAY_FIELDS = ['id', 'user', 'uid', 'version', 'changeset', 'timestamp']
+         way[attr] = element.attrib.get(attr)
+
+   wayTags = []
+
+   for tag in element.iter('tag'): #WAY_TAGS_FIELDS = ['id', 'key', 'value', 'type']
+      keystr = tag.attrib.get('k')
+      keys = keystr.split(':')
+
+      if len(keys) == 1:
+         key = keys[0]
+         t = 'regular'
+      else:
+         key = keystr[(keystr.index(':')+1):]
+         t = keys[0]
+
+      wayTags.append({
+         'id': way.get('id'),
+         'key': key,
+         'value': tag.attrib.get('v'),
+         'type': t
+      })
+
+   wayNodes = []
+   idx = 0
+   for nd in element.iter('nd'): #WAY_NODES_FIELDS = ['id', 'node_id', 'position']
+      wayNodes.append({
+         'id': way.get('id'),
+         'node_id': nd.attrib.get('ref'),
+         'position': idx,
+      })
+      idx += 1 #? access iterator index?
+
+   #pprint.pprint({'way': way, 'way_nodes': wayNodes, 'way_tags': wayTags})
+   return {'way': way, 'way_nodes': wayNodes, 'way_tags': wayTags}
 
 
 # ================================================== #
