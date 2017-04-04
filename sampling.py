@@ -1,12 +1,5 @@
 import xml.etree.ElementTree as ET  # Use cElementTree or lxml if too slow
 
-AREA = "munich_germany"
-OSM_FILE = AREA + ".osm"  # Replace this with your osm file
-
-k = 10 # Parameter: take every k-th top level element
-SAMPLE_FILE = AREA + "_k" + str(k) + ".osm"
-
-
 def get_element(osm_file, tags=('node', 'way', 'relation')):
    """Yield element if it is the right type of tag
 
@@ -21,13 +14,19 @@ def get_element(osm_file, tags=('node', 'way', 'relation')):
          root.clear()
 
 
-with open(SAMPLE_FILE, 'wb') as output:
-   output.write('<?xml version="1.0" encoding="UTF-8"?>\n')
-   output.write('<osm>\n  ')
+def writeSample(area, k):
+   OSM_FILE = area + ".osm"  # Replace this with your osm file
+   SAMPLE_FILE = area + "_k" + str(k) + ".osm"
 
-   # Write every kth top level element
-   for i, element in enumerate(get_element(OSM_FILE)):
-      if i % k == 0:
-         output.write(ET.tostring(element, encoding='utf-8'))
+   with open(SAMPLE_FILE, 'wb') as output:
+      output.write('<?xml version="1.0" encoding="UTF-8"?>\n')
+      output.write('<osm>\n  ')
 
-   output.write('</osm>')
+      # Write every kth top level element
+      for i, element in enumerate(get_element(OSM_FILE)):
+         if i % k == 0:
+            output.write(ET.tostring(element, encoding='utf-8'))
+
+      output.write('</osm>')
+
+   return SAMPLE_FILE
