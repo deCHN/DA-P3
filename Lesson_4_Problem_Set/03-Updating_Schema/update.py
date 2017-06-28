@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-In this problem set you work with another type of infobox data, audit it, clean it, 
+In this problem set you work with another type of infobox data, audit it, clean it,
 come up with a data model, insert it into a MongoDB and then run some queries against your database.
 The set contains data about Arachnid class.
 
@@ -43,8 +43,8 @@ import json
 import pprint
 
 DATAFILE = 'arachnid.csv'
-FIELDS ={'rdf-schema#label': 'label',
-         'binomialAuthority_label': 'binomialAuthority'}
+FIELDS = {'rdf-schema#label': 'label',
+          'binomialAuthority_label': 'binomialAuthority'}
 
 
 def add_field(filename, fields):
@@ -55,14 +55,29 @@ def add_field(filename, fields):
         reader = csv.DictReader(f)
         for i in range(3):
             l = reader.next()
+
         # YOUR CODE HERE
+        for row in reader:
+            value = row['binomialAuthority_label']
+            if value == "NULL":
+                continue
+
+            key = row['rdf-schema#label']
+            if key.find("(") != -1:
+                key = key[:(key.find("(") - 1)]
+
+            data[key] = value
 
     return data
 
 
 def update_db(data, db):
     # YOUR CODE HERE
-    pass
+    for d in data:
+        db.arachnid.update(
+            {'label': d},
+            {"$set": {"classification.binomialAuthority": data[d]}}
+        )
 
 
 def test():
@@ -70,7 +85,7 @@ def test():
     # Changes done to this function will not be taken into account
     # when doing a Test Run or Submit, they are just for your own reference
     # and as an example for running this code locally!
-    
+
     data = add_field(DATAFILE, FIELDS)
     from pymongo import MongoClient
     client = MongoClient("mongodb://localhost:27017")
@@ -81,7 +96,6 @@ def test():
     updated = db.arachnid.find_one({'label': 'Opisthoncana'})
     assert updated['classification']['binomialAuthority'] == 'Embrik Strand'
     pprint.pprint(data)
-
 
 
 if __name__ == "__main__":
