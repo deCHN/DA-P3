@@ -1,14 +1,14 @@
 import json
 
+
 def insert_data(data, db):
-
     # Your code here. Insert the data into a collection 'arachnid'
-
-    pass
+    for d in data:
+        db.arachnid.insert_one(d)
 
 
 if __name__ == "__main__":
-    
+
     from pymongo import MongoClient
     client = MongoClient("mongodb://localhost:27017")
     db = client.examples
