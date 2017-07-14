@@ -10,10 +10,10 @@ Theprocess for this transformation is as follows:
 
 We've already provided the code needed to load the data, perform iterative parsing and write the output to csv files. Your task is to complete the shape_element function that will transform each element into the correct format. To make this process easier we've already defined a schema (see the schema.py file in the last code tab) for the .csv files and the eventual tables. Using the cerberus library we can validate the output against this schema to ensure it is correct.
 
-## Shape Element Function
+# Shape Element Function
 The function should take as input an iterparse Element object and return a dictionary.
 
-### If the element top level tag is "node":
+# If the element top level tag is "node":
 The dictionary returned should have the format {"node": .., "node_tags": ...}
 
 The "node" field should hold a dictionary of the following top level node attributes:
@@ -62,11 +62,14 @@ The final return value for a "node" element should look something like:
    'node_tags': [
       {'id': 757860928, 'key': 'amenity', 'value': 'fast_food', 'type': 'regular'},
       {'id': 757860928, 'key': 'cuisine', 'value': 'sausage', 'type': 'regular'},
-      {'id': 757860928, 'key': 'name', 'value': "Shelly's Tasty Freeze", 'type': 'regular'}
+      {'id': 757860928,
+    'key': 'name',
+    'value': "Shelly's Tasty Freeze",
+     'type': 'regular'}
    ]
 }
 
-### If the element top level tag is "way":
+# If the element top level tag is "way":
 The dictionary should have the format {"way": ..., "way_tags": ..., "way_nodes": ...}
 
 The "way" field should hold a dictionary of the following top level way attributes:
@@ -109,8 +112,10 @@ The final return value for a "way" element should look something like:
    ],
    'way_tags': [
       {'id': 209809850, 'key': 'housenumber', 'type': 'addr', 'value': '1412'},
-      {'id': 209809850, 'key': 'street', 'type': 'addr', 'value': 'West Lexington St.'},
-      {'id': 209809850, 'key': 'street:name', 'type': 'addr', 'value': 'Lexington'},
+      {'id': 209809850, 'key': 'street', 'type': 'addr',
+          'value': 'West Lexington St.'},
+      {'id': 209809850, 'key': 'street:name',
+          'type': 'addr', 'value': 'Lexington'},
       {'id': '209809850', 'key': 'street:prefix', 'type': 'addr', 'value': 'West'},
       {'id': 209809850, 'key': 'street:type', 'type': 'addr', 'value': 'Street'},
       {'id': 209809850, 'key': 'building', 'type': 'regular', 'value': 'yes'},
@@ -143,8 +148,17 @@ PROBLEMCHARS = re.compile(r'[=\+/&<>;\'"\?%#$@\,\. \t\r\n]')
 
 SCHEMA = schema.schema
 
-# Make sure the fields order in the csvs matches the column order in the sql table schema
-NODE_FIELDS = ['id', 'lat', 'lon', 'user', 'uid', 'version', 'changeset', 'timestamp']
+# Make sure the fields order in the csvs matches the column order in the
+# sql table schema
+NODE_FIELDS = [
+    'id',
+    'lat',
+    'lon',
+    'user',
+    'uid',
+    'version',
+    'changeset',
+    'timestamp']
 NODE_TAGS_FIELDS = ['id', 'key', 'value', 'type']
 WAY_FIELDS = ['id', 'user', 'uid', 'version', 'changeset', 'timestamp']
 WAY_TAGS_FIELDS = ['id', 'key', 'value', 'type']
@@ -152,171 +166,186 @@ WAY_NODES_FIELDS = ['id', 'node_id', 'position']
 
 
 def shape_element(element, node_attr_fields=NODE_FIELDS, way_attr_fields=WAY_FIELDS,
-   problem_chars=PROBLEMCHARS, default_tag_type='regular'):
-   """Clean and shape node or way XML element to Python dict"""
+                  problem_chars=PROBLEMCHARS, default_tag_type='regular'):
+    """Clean and shape node or way XML element to Python dict"""
 
-   node_attribs = {}
-   way_attribs = {}
-   way_nodes = []
-   tags = []  # Handle secondary tags the same way for both node and way elements
+    node_attribs = {}
+    way_attribs = {}
+    way_nodes = []
+    tags = []
 
-   # YOUR CODE HERE
-   if element.tag == 'node':
-      return shapingNode(element)
-      #return {'node': node_attribs, 'node_tags': tags}
-   elif element.tag == 'way':
-      return shapingWay(element)
-      #return {'way': way_attribs, 'way_nodes': way_nodes, 'way_tags': tags}
+    # YOUR CODE HERE
+    if element.tag == 'node':
+        return shapingNode(element)
+    elif element.tag == 'way':
+        return shapingWay(element)
 
-def shapingNode(element): #return {'node': node_attribs, 'node_tags': tags}
-   # NODE_FIELDS = ['id', 'lat', 'lon', 'user', 'uid', 'version', 'changeset', 'timestamp']
-   node = {}
-   for attr in element.attrib:
-      if attr in NODE_FIELDS:
-         node[attr] = element.attrib.get(attr)
 
-   # NODE_TAGS_FIELDS = ['id', 'key', 'value', 'type']
-   nodeTags = []
+# NODE_FIELDS = ['id', 'lat', 'lon', 'user', 'uid', 'version',
+# 'changeset', 'timestamp']
+# return {'node': node_attribs, 'node_tags': tags}
+def shapingNode(element):
+    node = {}
+    for attr in element.attrib:
+        if attr in NODE_FIELDS:
+            node[attr] = element.attrib.get(attr)
 
-   for tag in element.iter('tag'):
-      keystr = tag.attrib.get('k')
-      keys = keystr.split(':')
-      if len(keys) == 1:
-         key = keys[0]
-         t = 'regular'
-      else:
-         key = keystr[(keystr.index(':')+1):]
-         t = keys[0]
+    # NODE_TAGS_FIELDS = ['id', 'key', 'value', 'type']
+    nodeTags = []
 
-      nodeTags.append({
-         'id': node.get('id'),
-         'key': key,
-         'value': tag.attrib.get('v'),
-         'type': t
-      })
+    for tag in element.iter('tag'):
+        keystr = tag.attrib.get('k')
+        keys = keystr.split(':')
+        if len(keys) == 1:
+            key = keys[0]
+            t = 'regular'
+        else:
+            key = keystr[(keystr.index(':') + 1):]
+            t = keys[0]
 
-      #pprint.pprint({'node': node, 'node_tags': nodeTags})
-      return {'node': node, 'node_tags': nodeTags}
+        nodeTags.append({
+            'id': node.get('id'),
+            'key': key,
+            'value': tag.attrib.get('v'),
+            'type': t
+        })
 
-def shapingWay(element): #return {'way': way_attribs, 'way_nodes': way_nodes, 'way_tags': tags}
-   way = {}
-   way_tags=[]
-   for attr in element.attrib:
-      if attr in WAY_FIELDS: #WAY_FIELDS = ['id', 'user', 'uid', 'version', 'changeset', 'timestamp']
-         way[attr] = element.attrib.get(attr)
+    return {'node': node, 'node_tags': nodeTags}
 
-   wayTags = []
 
-   for tag in element.iter('tag'): #WAY_TAGS_FIELDS = ['id', 'key', 'value', 'type']
-      keystr = tag.attrib.get('k')
-      keys = keystr.split(':')
+# WAY_FIELDS = ['id', 'user', 'uid', 'version', 'changeset', 'timestamp']
+# return {'way': way_attribs, 'way_nodes': way_nodes, 'way_tags': tags}
+def shapingWay(element):
+    way = {}
+    way_tags = []
+    for attr in element.attrib:
+        if attr in WAY_FIELDS:
+            way[attr] = element.attrib.get(attr)
 
-      if len(keys) == 1:
-         key = keys[0]
-         t = 'regular'
-      else:
-         key = keystr[(keystr.index(':')+1):]
-         t = keys[0]
+    wayTags = []
 
-      wayTags.append({
-         'id': way.get('id'),
-         'key': key,
-         'value': tag.attrib.get('v'),
-         'type': t
-      })
+    # WAY_TAGS_FIELDS = ['id', 'key', 'value', 'type']
+    for tag in element.iter('tag'):
+        keystr = tag.attrib.get('k')
+        keys = keystr.split(':')
 
-   wayNodes = []
-   idx = 0
-   for nd in element.iter('nd'): #WAY_NODES_FIELDS = ['id', 'node_id', 'position']
-      wayNodes.append({
-         'id': way.get('id'),
-         'node_id': nd.attrib.get('ref'),
-         'position': idx,
-      })
-      idx += 1 #? access iterator index?
+        if len(keys) == 1:
+            key = keys[0]
+            t = 'regular'
+        else:
+            key = keystr[(keystr.index(':') + 1):]
+            t = keys[0]
 
-   #pprint.pprint({'way': way, 'way_nodes': wayNodes, 'way_tags': wayTags})
-   return {'way': way, 'way_nodes': wayNodes, 'way_tags': wayTags}
+        wayTags.append({
+            'id': way.get('id'),
+            'key': key,
+            'value': tag.attrib.get('v'),
+            'type': t
+        })
+
+    wayNodes = []
+    idx = 0
+    # WAY_NODES_FIELDS = ['id', 'node_id', 'position']
+    for nd in element.iter('nd'):
+        wayNodes.append({
+            'id': way.get('id'),
+            'node_id': nd.attrib.get('ref'),
+            'position': idx,
+        })
+        idx += 1
+
+    return {'way': way, 'way_nodes': wayNodes, 'way_tags': wayTags}
 
 
 # ================================================== #
 #               Helper Functions                     #
 # ================================================== #
 def get_element(osm_file, tags=('node', 'way', 'relation')):
-   """Yield element if it is the right type of tag"""
+    """Yield element if it is the right type of tag"""
 
-   context = ET.iterparse(osm_file, events=('start', 'end'))
-   _, root = next(context)
-   for event, elem in context:
-      if event == 'end' and elem.tag in tags:
-         yield elem
-   root.clear()
+    context = ET.iterparse(osm_file, events=('start', 'end'))
+    _, root = next(context)
+    for event, elem in context:
+        if event == 'end' and elem.tag in tags:
+            yield elem
+    root.clear()
 
 
 def validate_element(element, validator, schema=SCHEMA):
-   """Raise ValidationError if element does not match schema"""
-   if validator.validate(element, schema) is not True:
-      field, errors = next(validator.errors.iteritems())
-      message_string = "\nElement of type '{0}' has the following errors:\n{1}"
-      error_string = pprint.pformat(errors)
+    """Raise ValidationError if element does not match schema"""
+    if validator.validate(element, schema) is not True:
+        field, errors = next(validator.errors.iteritems())
+        message_string = "\nElement of type '{0}' has the following errors:\n{1}"
+        error_string = pprint.pformat(errors)
 
-      raise Exception(message_string.format(field, error_string))
+        raise Exception(message_string.format(field, error_string))
+
 
 class UnicodeDictWriter(csv.DictWriter, object):
-   """Extend csv.DictWriter to handle Unicode input"""
+    """Extend csv.DictWriter to handle Unicode input"""
 
-   def writerow(self, row):
-      super(UnicodeDictWriter, self).writerow({
-         k: (v.encode('utf-8') if isinstance(v, unicode) else v) for k, v in row.iteritems()
-      })
+    def writerow(self, row):
+        super(UnicodeDictWriter, self).writerow({
+            k: (v.encode('utf-8') if isinstance(v, unicode) else v) for k, v in row.iteritems()
+        })
 
-   def writerows(self, rows):
-      for row in rows:
-         self.writerow(row)
+    def writerows(self, rows):
+        for row in rows:
+            self.writerow(row)
 
 # ================================================== #
 #               Main Function                        #
 # ================================================== #
+
+
 def process_map(file_in, validate):
-   """Iteratively process each XML element and write to csv(s)"""
+    """Iteratively process each XML element and write to csv(s)"""
 
-   with codecs.open(NODES_PATH, 'w') as nodes_file, \
-      codecs.open(NODE_TAGS_PATH, 'w') as nodes_tags_file, \
-      codecs.open(WAYS_PATH, 'w') as ways_file, \
-      codecs.open(WAY_NODES_PATH, 'w') as way_nodes_file, \
-      codecs.open(WAY_TAGS_PATH, 'w') as way_tags_file:
+    # with codecs.open(NODES_PATH, 'w') as nodes_file, \
+    # codecs.open(NODE_TAGS_PATH, 'w') as nodes_tags_file, \
+    # codecs.open(WAYS_PATH, 'w') as ways_file, \
+    # codecs.open(WAY_NODES_PATH, 'w') as way_nodes_file, \
+    # codecs.open(WAY_TAGS_PATH, 'w') as way_tags_file:
 
-      nodes_writer = UnicodeDictWriter(nodes_file, NODE_FIELDS)
-      node_tags_writer = UnicodeDictWriter(nodes_tags_file, NODE_TAGS_FIELDS)
-      ways_writer = UnicodeDictWriter(ways_file, WAY_FIELDS)
-      way_nodes_writer = UnicodeDictWriter(way_nodes_file, WAY_NODES_FIELDS)
-      way_tags_writer = UnicodeDictWriter(way_tags_file, WAY_TAGS_FIELDS)
+    # nodes_writer = UnicodeDictWriter(nodes_file, NODE_FIELDS)
+    # node_tags_writer = UnicodeDictWriter(nodes_tags_file, NODE_TAGS_FIELDS)
+    # ways_writer = UnicodeDictWriter(ways_file, WAY_FIELDS)
+    # way_nodes_writer = UnicodeDictWriter(way_nodes_file, WAY_NODES_FIELDS)
+    # way_tags_writer = UnicodeDictWriter(way_tags_file, WAY_TAGS_FIELDS)
 
-      nodes_writer.writeheader()
-      node_tags_writer.writeheader()
-      ways_writer.writeheader()
-      way_nodes_writer.writeheader()
-      way_tags_writer.writeheader()
+    # nodes_writer.writeheader()
+    # node_tags_writer.writeheader()
+    # ways_writer.writeheader()
+    # way_nodes_writer.writeheader()
+    # way_tags_writer.writeheader()
 
-      validator = cerberus.Validator()
+    validator = cerberus.Validator()
 
-      for element in get_element(file_in, tags=('node', 'way')):
-         el = shape_element(element)
-         if el:
+    for element in get_element(file_in, tags=('node', 'way')):
+        el = shape_element(element)
+        if el:
             if validate is True:
-               validate_element(el, validator)
+                validate_element(el, validator)
 
-            if element.tag == 'node':
-               nodes_writer.writerow(el['node'])
-               node_tags_writer.writerows(el['node_tags'])
-            elif element.tag == 'way':
-               ways_writer.writerow(el['way'])
-               way_nodes_writer.writerows(el['way_nodes'])
-               way_tags_writer.writerows(el['way_tags'])
+            insertElementIntoCollection(el, "munich_k10")
+
+            # if element.tag == 'node':
+            # nodes_writer.writerow(el['node'])
+            # node_tags_writer.writerows(el['node_tags'])
+            # elif element.tag == 'way':
+            # ways_writer.writerow(el['way'])
+            # way_nodes_writer.writerows(el['way_nodes'])
+            # way_tags_writer.writerows(el['way_tags'])
+
+
+def insertElementIntoCollection(el, collection):
+    from pymongo import MongoClient
+    cl = MongoClient("mongodb://localhost:27017")
+    db = cl.da
+    db.munich_K10.insert_one(el)
 
 
 if __name__ == '__main__':
-   # Note: Validation is ~ 10X slower. For the project consider using a small
-   # sample of the map when validating.
-   process_map(OSM_PATH, validate=True)
-
+    # Note: Validation is ~ 10X slower. For the project consider using a small
+    # sample of the map when validating.
+    process_map(OSM_PATH, validate=True)
