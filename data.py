@@ -130,26 +130,20 @@ import codecs
 import pprint
 import re
 import xml.etree.cElementTree as ET
-
 import cerberus
-
 import schema
 
 OSM_PATH = "data_example.osm"
-
-NODES_PATH = "nodes.csv"
-NODE_TAGS_PATH = "nodes_tags.csv"
-WAYS_PATH = "ways.csv"
-WAY_NODES_PATH = "ways_nodes.csv"
-WAY_TAGS_PATH = "ways_tags.csv"
 
 LOWER_COLON = re.compile(r'^([a-z]|_)+:([a-z]|_)+')
 PROBLEMCHARS = re.compile(r'[=\+/&<>;\'"\?%#$@\,\. \t\r\n]')
 
 SCHEMA = schema.schema
 
-# Make sure the fields order in the csvs matches the column order in the
-# sql table schema
+"""
+Make sure the fields order in the csvs matches the column order in the
+sql table schema
+"""
 NODE_FIELDS = [
     'id',
     'lat',
@@ -167,30 +161,32 @@ WAY_NODES_FIELDS = ['id', 'node_id', 'position']
 
 def shape_element(element, node_attr_fields=NODE_FIELDS, way_attr_fields=WAY_FIELDS,
                   problem_chars=PROBLEMCHARS, default_tag_type='regular'):
-    """Clean and shape node or way XML element to Python dict"""
-
+    """ Clean and shape node or way XML element to Python dict """
     node_attribs = {}
     way_attribs = {}
     way_nodes = []
     tags = []
 
-    # YOUR CODE HERE
     if element.tag == 'node':
         return shapingNode(element)
     elif element.tag == 'way':
         return shapingWay(element)
 
 
-# NODE_FIELDS = ['id', 'lat', 'lon', 'user', 'uid', 'version',
-# 'changeset', 'timestamp']
-# return {'node': node_attribs, 'node_tags': tags}
 def shapingNode(element):
+    """
+    Args:
+        NODE_FIELDS = ['id', 'lat', 'lon', 'user', 'uid', 'version', 'changeset', 'timestamp']
+
+    Returns:
+        {'node': node_attribs, 'node_tags': tags}
+    """
     node = {}
     for attr in element.attrib:
         if attr in NODE_FIELDS:
             node[attr] = element.attrib.get(attr)
 
-    # NODE_TAGS_FIELDS = ['id', 'key', 'value', 'type']
+    """ NODE_TAGS_FIELDS = ['id', 'key', 'value', 'type'] """
     nodeTags = []
 
     for tag in element.iter('tag'):
@@ -213,9 +209,14 @@ def shapingNode(element):
     return {'node': node, 'node_tags': nodeTags}
 
 
-# WAY_FIELDS = ['id', 'user', 'uid', 'version', 'changeset', 'timestamp']
-# return {'way': way_attribs, 'way_nodes': way_nodes, 'way_tags': tags}
 def shapingWay(element):
+    """
+    Args:
+        WAY_FIELDS = ['id', 'user', 'uid', 'version', 'changeset', 'timestamp']
+
+    Returns:
+        {'way': way_attribs, 'way_nodes': way_nodes, 'way_tags': tags}
+    """
     way = {}
     way_tags = []
     for attr in element.attrib:
@@ -224,7 +225,7 @@ def shapingWay(element):
 
     wayTags = []
 
-    # WAY_TAGS_FIELDS = ['id', 'key', 'value', 'type']
+    """ WAY_TAGS_FIELDS = ['id', 'key', 'value', 'type'] """
     for tag in element.iter('tag'):
         keystr = tag.attrib.get('k')
         keys = keystr.split(':')
@@ -261,7 +262,7 @@ def shapingWay(element):
 #               Helper Functions                     #
 # ================================================== #
 def get_element(osm_file, tags=('node', 'way', 'relation')):
-    """Yield element if it is the right type of tag"""
+    """ Yield element if it is the right type of tag """
 
     context = ET.iterparse(osm_file, events=('start', 'end'))
     _, root = next(context)
@@ -272,7 +273,7 @@ def get_element(osm_file, tags=('node', 'way', 'relation')):
 
 
 def validate_element(element, validator, schema=SCHEMA):
-    """Raise ValidationError if element does not match schema"""
+    """ Raise ValidationError if element does not match schema """
     if validator.validate(element, schema) is not True:
         field, errors = next(validator.errors.iteritems())
         message_string = "\nElement of type '{0}' has the following errors:\n{1}"
@@ -282,7 +283,7 @@ def validate_element(element, validator, schema=SCHEMA):
 
 
 class UnicodeDictWriter(csv.DictWriter, object):
-    """Extend csv.DictWriter to handle Unicode input"""
+    """ Extend csv.DictWriter to handle Unicode input """
 
     def writerow(self, row):
         super(UnicodeDictWriter, self).writerow({
@@ -299,25 +300,7 @@ class UnicodeDictWriter(csv.DictWriter, object):
 
 
 def process_map(file_in, validate):
-    """Iteratively process each XML element and write to csv(s)"""
-
-    # with codecs.open(NODES_PATH, 'w') as nodes_file, \
-    # codecs.open(NODE_TAGS_PATH, 'w') as nodes_tags_file, \
-    # codecs.open(WAYS_PATH, 'w') as ways_file, \
-    # codecs.open(WAY_NODES_PATH, 'w') as way_nodes_file, \
-    # codecs.open(WAY_TAGS_PATH, 'w') as way_tags_file:
-
-    # nodes_writer = UnicodeDictWriter(nodes_file, NODE_FIELDS)
-    # node_tags_writer = UnicodeDictWriter(nodes_tags_file, NODE_TAGS_FIELDS)
-    # ways_writer = UnicodeDictWriter(ways_file, WAY_FIELDS)
-    # way_nodes_writer = UnicodeDictWriter(way_nodes_file, WAY_NODES_FIELDS)
-    # way_tags_writer = UnicodeDictWriter(way_tags_file, WAY_TAGS_FIELDS)
-
-    # nodes_writer.writeheader()
-    # node_tags_writer.writeheader()
-    # ways_writer.writeheader()
-    # way_nodes_writer.writeheader()
-    # way_tags_writer.writeheader()
+    """ Iteratively process each XML element and write into mongodb collection(s) """
 
     validator = cerberus.Validator()
 
@@ -327,25 +310,22 @@ def process_map(file_in, validate):
             if validate is True:
                 validate_element(el, validator)
 
-            insertElementIntoCollection(el, "munich_k10")
-
-            # if element.tag == 'node':
-            # nodes_writer.writerow(el['node'])
-            # node_tags_writer.writerows(el['node_tags'])
-            # elif element.tag == 'way':
-            # ways_writer.writerow(el['way'])
-            # way_nodes_writer.writerows(el['way_nodes'])
-            # way_tags_writer.writerows(el['way_tags'])
+            insertElementIntoCollection(el)
 
 
-def insertElementIntoCollection(el, collection):
+def insertElementIntoCollection(d):
+    """
+    Args:
+        json object.
+    """
     from pymongo import MongoClient
     cl = MongoClient("mongodb://localhost:27017")
     db = cl.da
-    db.munich_K10.insert_one(el)
+    db.mun10.insert_one(d)
 
 
 if __name__ == '__main__':
-    # Note: Validation is ~ 10X slower. For the project consider using a small
-    # sample of the map when validating.
+    """
+    Note: Validation is ~ 10X slower. For the project consider using a small sample of the map when validating.
+    """
     process_map(OSM_PATH, validate=True)
