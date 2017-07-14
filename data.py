@@ -62,10 +62,7 @@ The final return value for a "node" element should look something like:
    'node_tags': [
       {'id': 757860928, 'key': 'amenity', 'value': 'fast_food', 'type': 'regular'},
       {'id': 757860928, 'key': 'cuisine', 'value': 'sausage', 'type': 'regular'},
-      {'id': 757860928,
-    'key': 'name',
-    'value': "Shelly's Tasty Freeze",
-     'type': 'regular'}
+      {'id': 757860928, 'key': 'name', 'value': "Shelly's Tasty Freeze", 'type': 'regular'}
    ]
 }
 
@@ -133,7 +130,7 @@ import xml.etree.cElementTree as ET
 import cerberus
 import schema
 
-OSM_PATH = "data_example.osm"
+OSM_PATH = "./munich_germany_k10.osm"
 
 LOWER_COLON = re.compile(r'^([a-z]|_)+:([a-z]|_)+')
 PROBLEMCHARS = re.compile(r'[=\+/&<>;\'"\?%#$@\,\. \t\r\n]')
