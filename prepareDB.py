@@ -5,6 +5,7 @@ import pprint
 import re
 import codecs
 import json
+import sys
 """
 Your task is to wrangle the data and transform the shape of the data
 into the model we mentioned earlier. The output should be a list of dictionaries
@@ -103,7 +104,6 @@ def shape_element(element):
 
         address = {}
         for tag in element.iter('tag'):
-            # print('tag:', tag.attrib.get('k'), tag.attrib.get('v'))
             key = tag.attrib.get('k')
             addrs = key.split('addr:')
             if len(addrs) == 2:
@@ -118,7 +118,6 @@ def shape_element(element):
                 ndRef.append(nd.attrib.get('ref'))
             node['node_refs'] = ndRef
 
-        # pprint.pprint(node)
         return node
     else:
         return None
@@ -127,13 +126,18 @@ def shape_element(element):
 def process_map(file_in, pretty=False):
     file_out = "{0}.json".format(file_in)
     data = []
-    with codecs.open(file_out, "w") as fo:
+    with codecs.open(file_out, "w", "utf-8") as fo:
         for _, element in ET.iterparse(file_in):
             el = shape_element(element)
             if el:
                 data.append(el)
                 if pretty:
-                    fo.write(json.dumps(el, indent=2) + "\n")
+                    fo.write(
+                        json.dumps(
+                            el,
+                            indent=2,
+                            ensure_ascii=False).encode('utf-8') +
+                        "\n")
                 else:
                     fo.write(json.dumps(el) + "\n")
     return data
@@ -144,40 +148,42 @@ def test():
     # dataset, call the process_map procedure with pretty=False. The
     # pretty=True option adds additional spaces to the output, making it
     # significantly larger.
-    data = process_map('./example_l18c12.osm', True)
+    data = process_map('./munich_germany_k10.osm', True)
     # pprint.pprint(data)
 
-    correct_first_elem = {
-        "id": "261114295",
-        "visible": "true",
-        "type": "node",
-        "pos": [41.9730791, -87.6866303],
-        "created": {
-            "changeset": "11129782",
-            "user": "bbmiller",
-            "version": "7",
-            "uid": "451048",
-            "timestamp": "2012-03-28T18:31:23Z"
-        }
-    }
+    # correct_first_elem = {
+    # "id": "261114295",
+    # "visible": "true",
+    # "type": "node",
+    # "pos": [41.9730791, -87.6866303],
+    # "created": {
+    # "changeset": "11129782",
+    # "user": "bbmiller",
+    # "version": "7",
+    # "uid": "451048",
+    # "timestamp": "2012-03-28T18:31:23Z"
+    # }
+    # }
 
     # pprint.pprint(data[0])
-    assert data[0] == correct_first_elem
+    # assert data[0] == correct_first_elem
 
-    pprint.pprint(data[-1])
-    assert data[-1]["address"] == {
-        "street": "West Lexington St.",
-        "housenumber": "1412"
-    }
+    # pprint.pprint(data[-1])
+    # assert data[-1]["address"] == {
+    # "street": "West Lexington St.",
+    # "housenumber": "1412"
+    # }
 
-    assert data[-1]["node_refs"] == ["2199822281",
-                                     "2199822390",
-                                     "2199822392",
-                                     "2199822369",
-                                     "2199822370",
-                                     "2199822284",
-                                     "2199822281"]
+    # assert data[-1]["node_refs"] == ["2199822281",
+    # "2199822390",
+    # "2199822392",
+    # "2199822369",
+    # "2199822370",
+    # "2199822284",
+    # "2199822281"]
 
 
 if __name__ == "__main__":
+    reload(sys)
+    sys.setdefaultencoding('utf8')
     test()
