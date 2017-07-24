@@ -25,11 +25,10 @@ street_type_re = re.compile(
 
 expected = [
     "am",
-    "Am",
     "an",
-    "An",
-    "Im",
-    "In",
+    "im",
+    "in",
+    "zu",
     "bach",
     "insel",
     "kreppe",
@@ -59,7 +58,7 @@ def audit_street_type(street_types, street_name):
 
 def isNotExpected(streetName):
     for e in expected:
-        if e in streetName:
+        if e.lower() in streetName.lower():
             return False
     return True
 
