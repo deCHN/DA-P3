@@ -96,7 +96,6 @@ def shape_element(element):
                 pos[0] = float(element.attrib.get(attr))
             elif attr == "lon":
                 pos[1] = float(element.attrib.get(attr))
-
             else:
                 node[attr] = element.attrib.get(attr)
         node['created'] = created
@@ -105,12 +104,19 @@ def shape_element(element):
         address = {}
         for tag in element.iter('tag'):
             key = tag.attrib.get('k')
+            value = tag.attrib.get('v')
+
+            # put address related infomation in one dictionary
             addrs = key.split('addr:')
             if len(addrs) == 2:
                 if ':' not in addrs[1]:
-                    address[addrs[1]] = tag.attrib.get('v')
+                    address[addrs[1]] = value
             if bool(address):
                 node['address'] = address
+            # As tag's '<k>-value' may contain 'dot', which would cause problem, here I simply drop those tags.
+            # as fieldname in mongodb,
+            else if '.' not in key:
+                node[key] = value
 
         if element.tag == "way":
             ndRef = []
@@ -148,7 +154,7 @@ def test():
     # dataset, call the process_map procedure with pretty=False. The
     # pretty=True option adds additional spaces to the output, making it
     # significantly larger.
-    data = process_map('./munich_germany_k10.osm', True)
+    data = process_map('./munich_germany.osm')
     # pprint.pprint(data)
 
     # correct_first_elem = {
