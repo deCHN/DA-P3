@@ -115,7 +115,7 @@ def shape_element(element):
                 node['address'] = address
             # As tag's '<k>-value' may contain 'dot', which would cause problem, here I simply drop those tags.
             # as fieldname in mongodb,
-            else if '.' not in key:
+            elif '.' not in key:
                 node[key] = value
 
         if element.tag == "way":
