@@ -8,7 +8,7 @@ Merged from:
 - prepareDB.py
 
 Code auto-format and convention:
-    `autopep8 -ai --max-line-length 150'
+    `autopep8 -ai --max-line-length 200'
 '''
 import sys
 import codecs
@@ -34,6 +34,7 @@ For all these suffix, auditing accepts the street name in form of:
 street_type_re = re.compile(
     ur'(\s|-)?(straße|weg|ring|platz|allee|bogen|gasse|brücke|hof|berg|eck)$',
     re.IGNORECASE | re.UNICODE)
+
 lower = re.compile(r'^([a-z]|_)*$')
 lower_colon = re.compile(r'^([a-z]|_)*:([a-z]|_)*$')
 
@@ -51,6 +52,7 @@ expected = ["am", "an", "im", "in", "zu", "bach", "insel", "kreppe", "park", "ho
 ''' The unexpected street types to the appropriate ones in the expected list.  The variable 'mapping' to reflect the changes needed to fix. '''
 mapping = {u"St": u"Street", u"Str.": u"Straße", u"Ave": u"Avenue", u"Rd.": u"Road", u"St.": u"Street"}
 
+# structure these attributes into 'created' document
 CREATED = ["version", "changeset", "timestamp", "user", "uid"]
 
 
@@ -60,6 +62,8 @@ def routine(osmfile, validate=False, pretty=False):
         osmfile str - osm input file
         validate bool - validate the element against a schema
         pretty bool - line break and indent for output file
+    Return:
+        unexpeceted (none match) street names in a dictionary.
     '''
     osm_file = codecs.open(osmfile, "r", "utf-8")
     street_types = defaultdict(set)
@@ -143,6 +147,71 @@ def audit_country_name(tag):
 
 
 def shape(element):
+    ''' Shape the xml element into a json object.
+    Args:
+        element xml.etree.cElementTree<event, elem> - xml element.
+    Return:
+        shaped element.
+
+    This function transforms the shape of the data into the model which look like this:
+    {
+        "id": "2406124091",
+        "type: "node",
+        "visible":"true",
+        "created": {
+            "version":"2",
+            "changeset":"17206049",
+            "timestamp":"2013-08-03T16:43:42Z",
+            "user":"linuxUser16",
+            "uid":"1219059"
+            },
+        "pos": [41.9757030, -87.6921867],
+        "address": {
+            "housenumber": "5157",
+            "postcode": "60625",
+            "street": "North Lincoln Ave"
+            },
+        "amenity": "restaurant",
+        "cuisine": "mexican",
+        "name": "La Cabana De Don Luis",
+        "phone": "1 (773)-271-5176"
+    }
+
+    In particular the following things have done:
+    - you should process only 2 types of top level tags: "node" and "way"
+    - all attributes of "node" and "way" should be turned into regular key/value pairs, except:
+    - attributes in the CREATED array should be added under a key "created"
+    - attributes for latitude and longitude should be added to a "pos" array, for use in geospacial indexing. Make sure the values inside "pos" array are floats and not strings.
+    - if the second level tag "k" value contains problematic characters, it should be ignored
+    - if the second level tag "k" value starts with "addr:", it should be added to a dictionary "address"
+    - if the second level tag "k" value does not start with "addr:", but contains ":", you can process it in a way that you feel is best. For example, you might split it into a two-level dictionary like with "addr:", or otherwise convert the ":" to create a valid key.
+    - if there is a second ":" that separates the type/direction of a street, the tag should be ignored, for example:
+    <tag k="addr:housenumber" v="5158"/>
+    <tag k="addr:street" v="North Lincoln Avenue"/>
+    <tag k="addr:street:name" v="Lincoln"/>
+    <tag k="addr:street:prefix" v="North"/>
+    <tag k="addr:street:type" v="Avenue"/>
+    <tag k="amenity" v="pharmacy"/>
+
+    should be turned into:
+    {   ...
+        "address": {
+            "housenumber": 5158,
+            "street": "North Lincoln Avenue"
+            }
+        "amenity": "pharmacy",
+        ...
+    }
+
+    - for "way" specifically:
+
+    <nd ref="305896090"/>
+    <nd ref="1719825889"/>
+
+    should be turned into:
+
+    "node_refs": ["305896090", "1719825889"]
+    '''
     node = {}
 
     node['type'] = element.tag
@@ -195,7 +264,7 @@ def isNotExpected(streetName):
 
 
 def validate_element(element, validator, schema=SCHEMA):
-    """ Raise ValidationError if element does not match schema """
+    ''' Raise ValidationError if element does not match schema. '''
     if validator.validate(element, schema) is not True:
         field, errors = next(validator.errors.iteritems())
         message_string = "\nElement of type '{0}' has the following errors:\n{1}"
