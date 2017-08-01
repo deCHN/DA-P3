@@ -69,44 +69,34 @@ def routine(osmfile, validate=False, pretty=False):
     street_types = defaultdict(set)
 
     file_out = "{0}.json".format(osmfile)
-    data = []
     validator = cerberus.Validator()
 
     with codecs.open(file_out, "w", "utf-8") as fo:
         for event, elem in ET.iterparse(osm_file, events=("start",)):
             if elem.tag == "node" or elem.tag == "way":
                 # Audit element
-                audit(elem, street_types)
+                for tag in elem.iter("tag"):
+                    if is_street_name(tag):
+                        audit_street_type(street_types, tag.attrib['v'])
+                    if is_country_name(tag) and tag.attrib['v'] != "DE":
+                        # All data wihin this area should have county name "DE"
+                        tag.attrib['v'] = "DE"
 
                 # Shape element
-                el = shape(elem)
-                if el:
+                doc = shape(elem)
+                if doc:
                     # Validate element
                     if validate is True:
-                        validate_element(el, validator)
-                    data.append(el)
+                        validate_element(doc, validator)
 
-                    # Persist element
+                    # Write element into a json file
                     if pretty:
-                        fo.write(json.dumps(el, indent=2, ensure_ascii=False).encode('utf-8') + "\n")
+                        fo.write(json.dumps(doc, indent=2, ensure_ascii=False).encode('utf-8') + "\n")
                     else:
-                        fo.write(json.dumps(el) + "\n")
+                        fo.write(json.dumps(doc) + "\n")
 
     osm_file.close()
     return street_types
-
-
-def audit(elem, street_types):
-    ''' Audit the street name in tag's value of "node" or "way" element, which in a format like "addr:street".
-    Args:
-        elem str - input xml element
-    '''
-    for tag in elem.iter("tag"):
-        if is_street_name(tag):
-            audit_street_type(street_types, tag.attrib['v'])
-        if is_country_name(tag):
-            # All data wihin this area should have county name "DE"
-            audit_country_name(tag)
 
 
 def is_street_name(elem):
@@ -123,9 +113,7 @@ def audit_street_type(street_types, street_name):
     Args:
         steet_type - collections.defaultdict
         street_name - string
-
     '''
-    update_name(street_name, mapping)
     m = street_type_re.search(street_name)
     if m is None and isNotExpected(street_name):
         street_types[street_name.rsplit(' ', 1)[-1]].add(street_name)
@@ -140,10 +128,7 @@ def update_name(name, mapping):
     str_type = name.rsplit(' ', 1)
     if len(str_type) == 2 and str_type[1] in mapping:
         name = str_type[0] + ' ' + mapping[str_type[1]]
-
-
-def audit_country_name(tag):
-    tag.attrib['v'] = "DE"
+    return name
 
 
 def shape(element):
@@ -213,11 +198,11 @@ def shape(element):
     "node_refs": ["305896090", "1719825889"]
     '''
     node = {}
-
     node['type'] = element.tag
 
     created = {}
     pos = [0.0] * 2
+
     for attr in element.attrib:
         if attr in CREATED:
             created[attr] = element.attrib.get(attr)
@@ -235,17 +220,19 @@ def shape(element):
         key = tag.attrib.get('k')
         value = tag.attrib.get('v')
 
+        # As tag's '<k>-value' may contain 'dot', which would cause problem, here I simply drop those tags.
+        # as fieldname in mongodb,
+        if '.' in key:
+            continue
+
         # put address related infomation in one dictionary
         addrs = key.split('addr:')
         if len(addrs) == 2:
-            if ':' not in addrs[1]:
-                address[addrs[1]] = value
+            # update the street
+            address[addrs[1]] = update_name(value, mapping)
+            print "isAnAddress"
         if bool(address):
             node['address'] = address
-        # As tag's '<k>-value' may contain 'dot', which would cause problem, here I simply drop those tags.
-        # as fieldname in mongodb,
-        elif '.' not in key:
-            node[key] = value
 
     if element.tag == "way":
         ndRef = []
