@@ -230,7 +230,6 @@ def shape(element):
         if len(addrs) == 2:
             # update the street
             address[addrs[1]] = update_name(value, mapping)
-            print "isAnAddress"
         if bool(address):
             node['address'] = address
 
